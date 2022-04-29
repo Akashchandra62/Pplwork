@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+}
+
+nav, nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+nav ul li{
+    list-style: none;
+    font-size: 25px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+form{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    border: 2px solid black;
+}
+form div{
+    /* background-color: yellow; */
+    width: 50%;
+    margin: 10px 0;
+}
+
+form label{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+form input{
+    padding: 8px 5px ;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    font-size: 15px;
+}
+
+main{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 27px;    
+
+}
+main table{
+    /* background-color: yellow; */
+    border: 2px solid black;
+    width: 80%;
+    
+}
+
+main table th,main table td{
+    border: 2px solid black;
+    margin: 0px 0px;
+    /* background-color: yellow; */
+    padding: 3px 7px;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.icon{
+    text-align: center;
+}

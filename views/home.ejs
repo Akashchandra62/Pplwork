@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head.ejs")%>
+    <title>Employee</title>
+</head>
+<link>
+<%- include("./partials/nav.ejs")%>
+<div id="client"></div>
+
+
+<%- include("./partials/script.ejs")%>
+<!-- <script>
+    async function handleSubmit(e) {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(e.target).entries());
+        //Fetching data from Backend
+        let res = await fetch("/register", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        res = await res.json();
+
+        if (res.message == "success") {
+            // location("/");
+
+            window.location.replace("/");
+        }
+    }
+    const form = document.querySelector("form");
+    form.addEventListener("submit", handleSubmit)
+</script> -->
+
+</body>
+
+</html>
