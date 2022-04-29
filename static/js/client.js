@@ -1,6 +1,7 @@
 const App = () => {
     const [users, setUsers] = React.useState([]);
     const [isDisable, setisDisable] = React.useState(false);
+    const [btntext, setbtntext] = React.useState("Register");
     const [form, setForm] = React.useState({
         name: "",
         email: ""
@@ -42,6 +43,7 @@ const App = () => {
             name: "",
             email: ""
         })
+        setbtntext("Register");
         setisDisable(false);
 
     }
@@ -52,6 +54,7 @@ const App = () => {
     }
     function handleEdit(id) {
         // console.log(id);
+        setbtntext("Update");
         fetch(`/edit/${id}`)
             .then(res => res.json())
             .then(data => {
@@ -67,7 +70,7 @@ const App = () => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <h2>Create New Employee</h2>
+                <h2>{btntext} Employee</h2>
                 <div>
                     <input type="text" value={form.name} onChange={() => updateForm(event, 'name')} className="form-control mt-2" placeholder="Enter the Employee name" />
                 </div>
@@ -75,7 +78,7 @@ const App = () => {
                     <input type="email" value={form.email} disabled={isDisable} onChange={() => updateForm(event, 'email')} className="form-control mt-2" placeholder="Enter the Employee email" />
                 </div>
 
-                <button type="submit" className="btn btn-primary">Register</button>
+                <button type="submit" className="btn btn-primary">{btntext}</button>
             </form>
             <main>
                 <table>
